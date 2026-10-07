@@ -1,0 +1,13 @@
+services:
+  web:
+    build: web
+    ports:
+      - "8000:80"
+
+  db:
+    build: db
+
+  words:
+    build: words
+    depends_on:
+      - db
