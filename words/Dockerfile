@@ -20,7 +20,7 @@ COPY src src
 RUN mvn verify
 
 # Start a new stage.
-FROM openjdk:8-jre-alpine
+FROM eclipse-temurin:8-jre-alpine
 
 # Copy the "target" directory.
 COPY --from=builder /target /target
